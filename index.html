@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment and QR Code Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container qr-scanner">
+            <h1>QR Code Scanner</h1>
+            <p>Drag and drop an image or paste from clipboard</p>
+            <div id="qr-drop-zone">
+                <img id="qr-image" src="" alt="">
+            </div>
+            <div id="qr-result">
+                <p>UPI ID: <span id="upi-id"></span> <button class="copy-btn" data-copy-target="upi-id">Copy</button></p>
+                <p>UPI Name: <span id="upi-name"></span> <button class="copy-btn" data-copy-target="upi-name">Copy</button></p>
+                 <input id="new-upi-name" class="update" type="text" placeholder="Enter a new UPI Name">
+                <button id="update-button" class="update-button">Update</button>
+                <p>Currency: <span id="currency"></span></p>
+                <p>Amount: ₹ <span id="amount"></span></p>
+            </div>
+        </div>
+        <div class="container payment-ui">
+            <header class="header">
+                <div class="back-button">&#8592;</div>
+                <div class="title">Pay</div>
+                <div class="help-button">?</div>
+            </header>
+            <div class="pay-section">
+                <div class="content">
+                    <div class="recipient">
+                        <div id="recipient-icon" class="recipient-icon">NA</div>
+                        <div class="recipient-details">
+                            <div class="recipient-name" id="payment-upi-name">NA</div>
+                            <div class="recipient-id" id="payment-upi-id">NA</div>
+                        </div>
+                    </div>
+                    <div class="amount-section">
+                        <div class="amount" id="payment-amount">&#8377; </div>
+                    </div>
+                    <div class="message-section">
+                        <input type="text" placeholder="Add a message (optional)">
+                    </div>
+                    <div class = "grey-section"></div>
+                </div>
+            </div>
+            <button class="pay-button">PROCEED TO PAY</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

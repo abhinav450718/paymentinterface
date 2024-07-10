@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #289efa;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    gap: 50px;
+}
+
+.container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-ui {
+    width: 355px;
+    height: 650px;
+}
+
+.qr-scanner {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5f259e;
+    color: #fff;
+    padding: 14px;
+}
+
+.back-button, .help-button {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.help-button {
+    position: relative;
+    font-size: 16px; /* Reduce the size of the question mark */
+}
+
+.help-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px; /* Reduce the size of the circle */
+    height: 16px; /* Reduce the size of the circle */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #5f259e; /* Reduce the shadow size */
+}
+
+.title {
+    font-size: 14px;
+    margin-right: 150px;
+}
+
+.pay-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipient {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recipient-icon {
+    background-color: #a747b5;
+    color: #fff;
+    font-size: 17px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.recipient-details {
+    flex-grow: 2;
+}
+
+.recipient-name {
+    font-size: 14px;
+}
+
+.recipient-id {
+    font-size: 11px;
+    color: #888;
+}
+
+.amount-section {
+    text-align: left;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.amount {
+    font-size: 22px;
+    padding: 10px 15px;
+}
+
+.amount::before {
+    content: "₹ ";
+}
+
+.message-section {
+    margin-bottom: 10px;
+}
+
+.message-section input {
+    width: 307px;
+    padding: 12px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.qr-scanner {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 560px;
+}
+
+#qr-drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin: 10px 0;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#qr-drop-zone:hover {
+    border-color: #aaa;
+}
+
+#qr-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#qr-result {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.copy-btn {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.pay-button {
+    width: 100%;
+    padding: 16px;
+    font-size: 12px;
+    background-color: #5f259e;
+    color: #fff;
+    border: none;
+}
+
+.grey-section {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin-left: calc((100% - 400px) / 2);
+    margin-right: calc((100% - 400px) / 2);
+}
+
+.update-button {
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+
+.update {
+    width: 200px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
